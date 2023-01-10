@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="tnbd-test">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.115723409081968 0.0664560979557336 -0.124705145122854"
+        rpy="0 0 0" />
+      <mass
+        value="2.32617612046961" />
+      <inertia
+        ixx="0.00815574571553272"
+        ixy="-2.86442961099172E-05"
+        ixz="-0.000329601695057402"
+        iyy="0.0128517781543451"
+        iyz="-0.000175205741615394"
+        izz="0.00587168295806961" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tnbd-test/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tnbd-test/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="front">
+    <inertial>
+      <origin
+        xyz="0.04 0.0236120947500488 -0.049877221371119"
+        rpy="0 0 0" />
+      <mass
+        value="0.273889804906921" />
+      <inertia
+        ixx="0.000335060211779872"
+        ixy="9.35653254439043E-21"
+        ixz="4.02851264698071E-20"
+        iyy="0.00079692270152299"
+        iyz="6.50926009069712E-05"
+        izz="0.00055496887166969" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tnbd-test/meshes/front.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tnbd-test/meshes/front.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front"
+    type="fixed">
+    <origin
+      xyz="-0.25413 0.259 0.030639"
+      rpy="-1.9533 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="front" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="back">
+    <inertial>
+      <origin
+        xyz="0.00073570878880784 -0.00811367741170863 -0.00760571773883611"
+        rpy="0 0 0" />
+      <mass
+        value="0.123674446484502" />
+      <inertia
+        ixx="0.000154119408139332"
+        ixy="-1.20520089460571E-06"
+        ixz="3.93094444525202E-06"
+        iyy="0.000384914617025624"
+        iyz="3.20341814310499E-05"
+        izz="0.000271465443981443" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tnbd-test/meshes/back.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tnbd-test/meshes/back.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back"
+    type="fixed">
+    <origin
+      xyz="0.036611 0.119 0.023049"
+      rpy="-1.7297 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="back" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left-wheel">
+    <inertial>
+      <origin
+        xyz="1.38777878078145E-17 1.38777878078145E-17 0.0149237953980857"
+        rpy="0 0 0" />
+      <mass
+        value="0.44033183103492" />
+      <inertia
+        ixx="0.00055194543651255"
+        ixy="0"
+        ixz="2.59326056160353E-20"
+        iyy="0.00055194543651255"
+        iyz="1.60848599043456E-19"
+        izz="0.00103988623332371" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tnbd-test/meshes/left-wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tnbd-test/meshes/left-wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left-wheel"
+    type="fixed">
+    <origin
+      xyz="-0.0725 -0.044 0.0521"
+      rpy="-1.5708 0.15964 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left-wheel" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="right-wheel">
+    <inertial>
+      <origin
+        xyz="-1.38777878078145E-17 -6.93889390390723E-18 0.0149237953980857"
+        rpy="0 0 0" />
+      <mass
+        value="0.44033183103492" />
+      <inertia
+        ixx="0.00055194543651255"
+        ixy="-1.35525271560688E-20"
+        ixz="-6.13746659391556E-21"
+        iyy="0.00055194543651255"
+        iyz="-2.17087336989027E-22"
+        izz="0.00103988623332371" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tnbd-test/meshes/right-wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tnbd-test/meshes/right-wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right-wheel"
+    type="fixed">
+    <origin
+      xyz="-0.0725 0.294 0.0521"
+      rpy="1.5708 0.26474 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right-wheel" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="ridar">
+    <inertial>
+      <origin
+        xyz="0 0 0.0116926393256121"
+        rpy="0 0 0" />
+      <mass
+        value="0.138164930599878" />
+      <inertia
+        ixx="7.25230029198107E-05"
+        ixy="8.3028918109279E-22"
+        ixz="-9.28091615073954E-21"
+        iyy="7.25230029198107E-05"
+        iyz="9.11905196034366E-22"
+        izz="4.97771601006264E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tnbd-test/meshes/ridar.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tnbd-test/meshes/ridar.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ridar"
+    type="fixed">
+    <origin
+      xyz="-0.135 0.125 0.204"
+      rpy="3.1416 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="ridar" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="zed">
+    <inertial>
+      <origin
+        xyz="2.45619372063466E-10 0 0.0165"
+        rpy="0 0 0" />
+      <mass
+        value="0.166876325452904" />
+      <inertia
+        ixx="2.7222382341577E-05"
+        ixy="-1.42291822711566E-19"
+        ixz="5.68379928496377E-12"
+        iyy="0.000412109193003404"
+        iyz="-4.74784480015911E-21"
+        izz="0.000409043522275279" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tnbd-test/meshes/zed.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tnbd-test/meshes/zed.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="zed"
+    type="fixed">
+    <origin
+      xyz="-0.22924 0.12351 0.178"
+      rpy="-1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="zed" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
